@@ -1,6 +1,5 @@
 bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () {
     uarterteke = bluetooth.uartReadUntil(serial.delimiters(Delimiters.NewLine))
-    basic.showString(uarterteke)
     if (uarterteke.includes("5")) {
         bluetooth.uartWriteString("OK")
     }
@@ -15,13 +14,13 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () 
     }
 })
 function szirena () {
-    music.setTempo(60)
-    bluetooth.uartWriteLine("Szire'na!")
     while (true) {
         music.ringTone(988)
-        music.rest(music.beat(BeatFraction.Whole))
+        basic.pause(1000)
+        music.stopMelody(MelodyStopOptions.All)
         music.ringTone(784)
-        music.rest(music.beat(BeatFraction.Whole))
+        basic.pause(1000)
+        music.stopMelody(MelodyStopOptions.All)
     }
 }
 let ajto = false
