@@ -17,10 +17,8 @@ function szirena () {
     while (true) {
         music.ringTone(988)
         basic.pause(1000)
-        music.stopMelody(MelodyStopOptions.All)
         music.ringTone(784)
         basic.pause(1000)
-        music.stopMelody(MelodyStopOptions.All)
     }
 }
 let ajto = false
