@@ -7,7 +7,7 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () 
         ajto = !(ajto)
     }
     if (uarterteke.includes("2")) {
-        mozg = 2000
+        mozg = 10000
     }
     if (uarterteke.includes("3")) {
         control.reset()
