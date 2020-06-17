@@ -12,9 +12,10 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () 
     if (uarterteke.includes("3")) {
         control.reset()
     }
+    basic.showString(uarterteke)
 })
 function szirena () {
-    while (true) {
+    while (!(uarterteke.includes("0"))) {
         music.ringTone(988)
         basic.pause(1000)
         music.ringTone(784)
@@ -24,7 +25,7 @@ function szirena () {
 let ajto = false
 let uarterteke = ""
 let mozg = 0
-mozg = 20000
+mozg = 22020000
 basic.forever(function () {
     bluetooth.startUartService()
     if (ajto && input.pinIsPressed(TouchPin.P1)) {
