@@ -20,8 +20,8 @@ function szirena () {
         basic.pause(1000)
         music.ringTone(784)
         basic.pause(1000)
+        music.stopMelody(MelodyStopOptions.All)
     }
-    music.stopMelody(MelodyStopOptions.All)
 }
 let ajto = false
 let uarterteke = ""
