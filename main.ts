@@ -11,8 +11,8 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.NewLine), function () 
     }
     if (uarterteke.includes("3")) {
         control.reset()
-        basic.showString(uarterteke)
     }
+    basic.showString(uarterteke)
 })
 function szirena () {
     while (!(uarterteke.includes("0"))) {
